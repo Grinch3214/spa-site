@@ -3,6 +3,8 @@ import App from './App.vue'
 import { i18n } from './plugins/i18n'
 import router from './router/router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueTelInput from 'vue-tel-input'
+import 'vue-tel-input/dist/vue-tel-input.css'
 import 'swiper/css/swiper.css'
 import './assets/styles/style.scss'
 
@@ -21,6 +23,7 @@ router.beforeEach((to, from, next) => {
 })
 
 Vue.use(VueAwesomeSwiper)
+Vue.use(VueTelInput)
 
 Vue.directive('click-outside', {
   bind: function (el, binding, vnode) {

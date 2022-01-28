@@ -4,7 +4,7 @@ import VueI18n  from 'vue-i18n'
 Vue.use(VueI18n)
 
 export const i18n = new VueI18n({
-    locale: 'ru',
+    locale: 'ua',
     messages: {
         'ru': require('../assets/lang/ru'),
         'ua': require('../assets/lang/ua'),

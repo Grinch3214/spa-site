@@ -29,6 +29,11 @@ const router = new VueRouter({
                     name: 'Employer',
                     component: () => import('../components/view/Employer.vue')
                 },
+                {
+                    path: 'registration',
+                    name: 'Registration',
+                    component: () => import('../components/view/Registration.vue')
+                }
             ]
         }
     ]
