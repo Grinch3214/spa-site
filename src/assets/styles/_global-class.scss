@@ -66,3 +66,55 @@ button {
         font-weight: 700;
     }
 }
+
+.global-link {
+    font-weight: 700;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.center-line {
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 40%;
+        height: 1px;
+        background: #EAEAEA;
+    }
+    &::after {
+        left: auto;
+        right: 0;
+    }
+}
+
+.title-reg-page {
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+
+.wrapper-for-global-btn {
+    margin-top: 25px;
+    margin-bottom: 37px;
+    text-align: center;
+    button, a {
+      background: #4587E0;
+      color: #fff;
+      padding: 17px 0;
+      width: 100%;
+      text-decoration: none;
+      &:disabled {
+        background: #528BE6;
+        opacity: 50%;
+      }
+    }
+}
+
+.text-center {
+    text-align: center;
+}

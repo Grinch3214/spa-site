@@ -1,6 +1,6 @@
 <template>
-  <div class="registration-page container">
-    <div class="registration-page__wrapper">
+  <div class="registration-page d-flex flex-column">
+    <div class="registration-page__wrapper container flex-grow-1">
       <nav
         class="
           registration-page__nav
@@ -10,7 +10,7 @@
           flex-wrap
         "
       >
-        <div class="flex-grow-1">
+        <div class="flex-grow-1 flex-md-grow-0 order-1 order-md-1">
           <a href="#" class="registration-page__nav-logo">
             <img
               :src="require('../../assets/images/logo_footer.svg')"
@@ -19,11 +19,11 @@
           </a>
         </div>
 
-        <div>
+        <div class="order-2 order-md-3">
           <change-language />
         </div>
 
-        <div class="registration-page__nav-tabs d-flex justify-content-between">
+        <div class="registration-page__nav-tabs d-flex justify-content-between order-3 order-md-2">
           <button
             class="main-tab"
             :class="{ active: tabContent }"
@@ -41,12 +41,15 @@
         </div>
       </nav>
 
-      <h1 class="registration-page__title main-title">Регистрация</h1>
-
       <keep-alive>
         <component :is="componentRegistration" />
       </keep-alive>
     </div>
+    <div class="footer d-lg-none">
+      <div class="background-figure"></div>
+    </div>
+    
+
   </div>
 </template>
 
@@ -80,6 +83,18 @@ export default {
 
 <style lang="scss">
 .registration-page {
+  position: relative;
+  min-height: 100vh;
+  &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 35%;
+      height: 100%;
+      background: url('~@/assets/images/right_bg.svg') 0 0/cover no-repeat;
+    }
+
   .dropdown,
   .dropholder {
     background: transparent;
@@ -99,12 +114,17 @@ export default {
   }
 
   &__wrapper {
-    max-width: 350px;
-    margin: 0 auto;
+    position: relative;
   }
 
   &__nav {
+    max-width: 382px;
+    margin: 0 auto;
     padding-top: 16px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 139px;
+      max-width: none;
+    }
   }
 
   &__nav-logo {
@@ -120,15 +140,38 @@ export default {
     width: 100%;
     padding-top: 32px;
     padding-bottom: 36px;
+    @media screen and (min-width: 768px) {
+      width: auto;
+      padding: 0;
+      margin-right: auto;
+      margin-left: 39px;
+    }
     button {
       padding-bottom: 8px;
       width: 50%;
+      margin-right: 34px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
-  &__title {
-    font-size: 30px;
-    padding-bottom: 25px;
+  // &__title {
+  //   font-size: 30px;
+  //   padding-bottom: 25px;
+  // }
+
+  .footer {
+    padding-bottom: 190px;
+    &:before {
+      top: -165px;
+    }
   }
+
+  .background-figure {
+    &:after {
+      left: -20%;
+    }
+  }
+
 }
 </style>

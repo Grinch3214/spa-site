@@ -100,6 +100,7 @@ export default {
   }
 
   &__input {
+    outline-style: none;
     border: none;
     border-bottom: 1px solid #eee;
     font-size: 18px;

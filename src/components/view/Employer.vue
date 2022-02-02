@@ -16,7 +16,8 @@
             </h2>
             <p class="header__text">{{ $t('employerSubTitle') }}</p>
             <div class="header__links">
-              <button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button>
+              <router-link :to="`/${$i18n.locale}/registration`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
+              <!-- <button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button> -->
               <router-link :to="`/${$i18n.locale}`" class="header__links-link global-btn">
                 {{ $t('applicantsBtn') }}
               </router-link>
@@ -113,7 +114,8 @@
 			<h3 class="footer__subtitle main-title">{{ $t('footerSubtitle') }}</h3>
 			<p class="footer__text">{{ $t('footerTxt') }}</p>
 			<div class="footer__button">
-				<button class="footer__button-btn global-btn">{{ $t('registrationButton') }}</button>
+				<!-- <button class="footer__button-btn global-btn">{{ $t('registrationButton') }}</button> -->
+        <router-link :to="`/${$i18n.locale}/registration`" class="footer__button-btn global-btn"> {{ $t('registrationButton') }} </router-link>
 			</div>
       </template>
     </Footer>
@@ -135,21 +137,6 @@ export default {
     Subscription,
   },
   methods: {
-    // closeWindow() {
-
-    //   const container = document.getElementById('subscripContainer')
-    //   const subscrBtn = document.getElementById('subscripBtn')
-
-    //   document.addEventListener('click', (event) => {
-    //     console.log(event)
-    //     console.log(!container)
-    //       if(!container) {
-    //         console.log(container)
-    //         container.classList.remove('active');
-    //         subscrBtn.classList.remove('active');
-    //       }
-    //   })
-    // }
   }
 }
 </script>

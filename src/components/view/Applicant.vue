@@ -13,7 +13,8 @@
 				</h2>
 				<p class="header__text">{{ $t('applicationSubTitle') }}</p>
 				<div class="header__links">
-					<button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button>
+					<router-link :to="`/${$i18n.locale}/registration`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
+					<!-- <button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button> -->
 					<router-link :to="`/${$i18n.locale}/employer`" class="header__links-link global-btn">
 						{{ $t('employerBtn') }}
 					</router-link>
@@ -112,7 +113,8 @@
 			<h3 class="footer__subtitle main-title">{{ $t('footerSubtitle') }}</h3>
 			<p class="footer__text">{{ $t('applicationFooterTxt') }}</p>
 			<div class="footer__button">
-				<button class="footer__button-btn global-btn">{{ $t('registrationButton') }}</button>
+				<router-link :to="`/${$i18n.locale}/registration`" class="footer__button-btn global-btn"> {{ $t('registrationButton') }} </router-link>
+				<!-- <button class="footer__button-btn global-btn">{{ $t('registrationButton') }}</button> -->
 			</div>
       </template>
     </Footer>
