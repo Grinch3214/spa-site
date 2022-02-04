@@ -1,11 +1,131 @@
 <template>
-    <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt voluptatibus quasi cupiditate doloremque illum exercitationem consequatur nam nobis quos voluptas. Beatae labore soluta dolore illum vitae excepturi, sapiente minus deleniti vel pariatur, velit aperiam voluptates tenetur id quidem quasi amet dolorum dignissimos ab repellendus fuga perferendis ipsa, illo voluptatibus? Molestiae beatae voluptas nesciunt veniam sapiente est architecto, illo blanditiis iure possimus soluta autem quasi laudantium cupiditate quos voluptatum numquam asperiores perferendis odit inventore, esse et, reprehenderit doloribus. Dolor ab laudantium non possimus temporibus eveniet ullam quas quasi repudiandae assumenda exercitationem totam quibusdam natus nesciunt corporis rerum, cum rem modi provident. Quam esse laboriosam aut quos placeat aliquid perferendis eligendi! Ipsum accusantium hic incidunt nulla harum, aspernatur nobis tempora quas porro nostrum veniam necessitatibus cupiditate architecto dignissimos vel voluptates dolore!
+  <div>
+    <div class="registr-employer" v-if="stepOne">
+
+      <h1 class="title-reg-page main-title">
+          Регистрация
+        </h1>
+      <p class="registr-employer__text">Введите адрес корпоративной почты</p>
+
+      <base-input 
+        type="email"
+        placeholder="for_example@email.com"
+        v-model="email"
+        :value="email"
+        :validator="validateEmail"
+        maxlength="48"
+      />
+
+      <p class="registr-employer__text">
+        При нажатии кнопки Далее, Вы автоматически соглашаетесь с 
+        <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">политикой конфиденциальности</a> и даёте согласие на обработку моих персональных данных в соответствии с <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">Политикой конфиденциальности</a>.</p>
+
+      <div class="wrapper-for-global-btn">
+        <button @click="stepOne = false" :disabled="error" class="global-btn">Далее</button>
+      </div>
+
     </div>
+
+    <div v-else class="registr-employer registr-employer__lastpage">
+    <h1 class="title-reg-page main-title">Спасибо за регистрацию</h1>
+    <p class="registr-employer__content-text">
+      Сейчас мы находимся на фазе завершения системы тестирования. Как только весь функционал станет доступен — мы сразу же пришлем оповещение. Благодарим за ваш выбор. 
+    </p>
+    <p>
+      До скорой встречи!
+    </p>
+    <div class="wrapper-for-global-btn">
+      <router-link :to="`/${$i18n.locale}/employer`" class="global-btn">Вернуться на главную</router-link>
+    </div>
+  </div>
+    
+  </div>
 </template>
 
 <script>
+import BaseInput from "./BaseInput.vue";
 export default {
-    name: 'RegistrationEmployer',
-}
+  name: "RegistrationEmployer",
+  components: {
+    BaseInput,
+  },
+  data:() => ({
+    email: '',
+    error: true,
+    stepOne: true,
+  }),
+  methods: {
+    validateEmail(email) {
+      const req = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(email === '') {
+        return 'Введите email'
+      } else if (req.test(email)) {
+        this.email = email
+        this.error = false
+        return '';
+      } else {
+        return 'Некорректный email'
+      }
+    },
+  }
+};
 </script>
+<style lang="scss">
+.registr-employer {
+  max-width: 382px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: 992px) {
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 19.12px;
+  }
+
+  .base-input {
+    margin-bottom: 30px;
+  }
+
+  &__content-text {
+    font-size: 16px;
+    line-height: 21.86px;
+    margin-bottom: 35px;
+  }
+  &__content-text + p {
+    color: #528BE6;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+}
+
+.registr-employer__lastpage {
+    @media screen and (min-width: 768px) {
+      max-width: 540px;
+      text-align: center;
+
+      .title-reg-page {
+        font-size: 36px;
+      }
+
+      .wrapper-for-global-btn {
+        @media screen and (min-width: 992px) {
+          text-align: left;
+        }
+      }
+
+      .wrapper-for-global-btn a {
+        width: auto;
+        padding-left: 34px;
+        padding-right: 34px;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      text-align: left;
+    }
+  }
+</style>

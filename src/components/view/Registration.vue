@@ -85,7 +85,8 @@ export default {
 .registration-page {
   position: relative;
   min-height: 100vh;
-  &::before {
+  @media screen and (min-width: 992px) {
+    &::before {
       content: '';
       position: absolute;
       right: 0;
@@ -93,23 +94,52 @@ export default {
       width: 35%;
       height: 100%;
       background: url('~@/assets/images/right_bg.svg') 0 0/cover no-repeat;
+      @media screen and (min-width: 1680px) {
+      width: 29%;
     }
+    }
+  }
 
   .dropdown,
   .dropholder {
     background: transparent;
     color: #222536;
+    @media screen and (min-width: 992px) {
+      color: #fff;
+    }
+    @media screen and (min-width: 1680px) {
+      color: #222536;
+    }
   }
   .dropdown {
     &::after {
       border-top: 1px solid #528be6;
       border-left: 1px solid #528be6;
+      @media screen and (min-width: 992px) {
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
+      @media screen and (min-width: 1680px) {
+        border-top: 1px solid #528be6;
+      border-left: 1px solid #528be6;
+      }
     }
   }
   .dropdown-option {
     background: #fff;
     li {
       color: #222536;
+    }
+    @media screen and (min-width: 992px) {
+        background: transparent;
+        li {
+          color: #fff;
+        }
+    }
+    @media screen and (min-width: 1680px) {
+        li {
+          color: #222536;
+        }
     }
   }
 
@@ -154,11 +184,6 @@ export default {
       padding-right: 0;
     }
   }
-
-  // &__title {
-  //   font-size: 30px;
-  //   padding-bottom: 25px;
-  // }
 
   .footer {
     padding-bottom: 190px;

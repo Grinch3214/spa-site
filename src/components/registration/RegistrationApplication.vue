@@ -71,7 +71,7 @@
 
   <div v-else class="registr-aplicant registr-aplicant__lastpage">
     <h1 class="title-reg-page main-title">Спасибо за регистрацию</h1>
-    <p class="registr-aplicant__contebt-text">
+    <p class="registr-aplicant__content-text">
       Благодарим за регистрацию на нашем сервисе, как только все будет готово мы пришлем оповещение. В благодарность за уделенное время отправляем на почту “10 правил успешного резюме”. 
     </p>
     <p>
@@ -249,12 +249,12 @@ export default {
     }
   }
 
-  &__contebt-text {
+  &__content-text {
     font-size: 16px;
     line-height: 21.86px;
     margin-bottom: 35px;
   }
-  &__contebt-text + p {
+  &__content-text + p {
     color: #528BE6;
     font-weight: 700;
     margin-bottom: 30px;
