@@ -14,7 +14,6 @@
 				<p class="header__text">{{ $t('applicationSubTitle') }}</p>
 				<div class="header__links">
 					<router-link :to="`/${$i18n.locale}/registration`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
-					<!-- <button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button> -->
 					<router-link :to="`/${$i18n.locale}/employer`" class="header__links-link global-btn">
 						{{ $t('employerBtn') }}
 					</router-link>

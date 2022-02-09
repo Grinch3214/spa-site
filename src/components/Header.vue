@@ -5,7 +5,6 @@
 		<div class="container z-index-20">
 			<nav class="d-flex justify-content-between align-items-center pt-4 pt-md-3">
 				<div class="d-flex align-items-center">
-					<!-- <change-language @setLocale="setLocale" /> -->
 					<change-language />
 
 					<slot name="subscrible"></slot>
@@ -13,8 +12,8 @@
 				</div>
 
 				<div class="header__buttons">
-					<button class="header__buttons-join global-btn">{{ $t('loginButton') }}</button>
-					<button class="header__buttons-registration global-btn d-none d-md-inline-block">{{ $t('registrationButton') }}</button>
+					<!-- <button class="header__buttons-join global-btn">{{ $t('loginButton') }}</button> -->
+					<router-link :to="`/${$i18n.locale}/registration`" class="header__buttons-registration global-btn global-link d-none d-md-inline-block">{{ $t('registrationButton') }}</router-link>
 				</div>
 			</nav>
 			
