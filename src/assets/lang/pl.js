@@ -5,6 +5,13 @@ module.exports = {
     employerBtn: 'Firmy',
     showCompany: 'Pokaż wszystko',
     hideCompany: 'Schowaj wszystko',
+    subscriptionBtn: 'Subskrypcja',
+    applicantsTab: 'Kandydac',
+    employerTab: 'Firmy',
+    nextBtn: 'Next', //Pl need
+    backBtn: 'Back', //Pl need
+    orTXT: 'lub',
+    linkSendMessage: 'Wyślij ponownie',
 
     //employer SPA
     employerMainTitle: 'Narzędzie uniwersalne za ocenę i zatrudnienie specjalistów IT',
@@ -72,4 +79,54 @@ module.exports = {
 
     // footer section
     applicationFooterTxt: 'Wykorzystaj w pełni swoje poszukiwanie pracy',
+
+    // !Subscription
+    month: 'miesiąc',
+    tokens: 'tokeny',
+
+    subscriptionMonth: 'Miesięczna',
+    subscriptionYear: 'Roczna',
+    subscriptionBasic: 'Podstawowa',
+    subscriptionStandart: 'Standardowa',
+    subscriptionPremium: 'Premium',
+    subscriptionEnterprise: 'Korporacyjna',
+
+    subscriptionCardPriceTextA: 'Dla firm zatrudniających ponad 800 pracowników',
+    subscriptionCardPriceTextB: 'Tokeny w tym tempie instalowane indywidualnie.',
+
+    subscriptionCardPriceTitleA: 'Wybierz wygodny plan taryfowy',
+    subscriptionCardPriceTitleB: 'Każda subskrypcja zawiera:',
+    subscriptionCardPriceTitleC: 'Czym są tokeny?',
+
+    subscriptionCardPriceMoreA: 'Aby nasza usługa była dostępna dla wszystkich, opracowaliśmy szereg planów taryfowych, aby zaspokoić potrzeby firm dowolnej wielkości: od start-upów i studiów po przedsiębiorstwa.',
+    subscriptionCardPriceMoreB_1: 'Otwarcie kontaktów z kandydatami',
+    subscriptionCardPriceMoreB_2: 'Oferty pracy w imieniu firmy',
+    subscriptionCardPriceMoreC: 'To nasza specjalna waluta, która pozwoli Ci korzystać ze wszystkich unikalnych funkcji platformy i maksymalnie uprościć i przyspieszyć proces rekrutacji.',
+
+    //! Registration Page NEED PL TRANSLATE FOR THIS BLOCK FCK!!!
+    registrApplicantPhone: 'Enter your phone number*',
+    registrApplicantSelect: 'How did you hear about us?',
+    registrApplicantSelectPlace: 'Your choice',
+    registrApplicantSelectA: 'Recommendation of a colleague',
+    registrApplicantSelectB: 'Recruiting Community Recommendation',
+    registrApplicantSelectC: 'From search engines',
+    registrApplicantSelectD: 'From social networks',
+    registrApplicantSelectE: 'From an event or webinar',
+    registrApplicantSelectF: 'From an advertisement',
+    registrApplicantSelectG: 'From a mention in an article',
+    registrApplicantSelectH: 'Other',
+
+    registrApplicantPolicyA: 'When you click Next, you automatically agree to',
+    registrApplicantLink: 'the Privacy Policy',
+    registrApplicantPolicyB: 'and consent to the processing of your personal data in accordance with',
+
+    registrApplicantCode: 'Wpisz kod wysłany do Ciebie SMS-em',
+    registrApplicanThxTitle: 'Спасибо за регистрацию',
+    registrApplicanThxTxt: 'Благодарим за регистрацию на нашем сервисе, как только все будет готово мы пришлем оповещение.',
+    registrApplicanThxSoon: 'До скорой встречи!',
+    registrApplicanThxBb: 'Вернуться на главную',
+    // EMPLOYER
+    registrEmployerEmail: 'Enter your corporate email address',
+    //step 2
+    registrEmployerThxTxt: 'Сейчас мы находимся на фазе завершения системы тестирования. Как только весь функционал станет доступен — мы сразу же пришлем оповещение. Благодарим за ваш выбор.',
 }

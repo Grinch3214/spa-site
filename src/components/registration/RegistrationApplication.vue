@@ -2,9 +2,9 @@
   <div>
     <div v-if="stepOne" class="registr-aplicant">
         <h1 class="title-reg-page main-title">
-          Регистрация
+          {{ $t('registrationButton') }}
         </h1>
-      <p class="registr-aplicant__text">Введите ваш номер телефона*</p>
+      <p class="registr-aplicant__text">{{ $t('registrApplicantPhone') }}</p>
 
     <vue-tel-input
       v-model="phone"
@@ -17,25 +17,25 @@
     />
 
     <div class="registr-aplicant__text">
-      Откуда Вы узнали о нас?
+      {{ $t('registrApplicantSelect') }}
     </div>
 
   <choice-input-select 
-    :options="optionsSelect"
+    :options="optionSelect.optionsSelect"
     class="select"
     @input="selectOption"
-    :playceholder="'Свой вариант'"
+    :playceholder="optionSelect.playceholder"
   />
 
   <p class="registr-aplicant__text">
-    При нажатии кнопки Далее, Вы автоматически соглашаетесь с 
-    <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">политикой конфиденциальности</a> и даёте согласие на обработку моих персональных данных в соответствии с <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">Политикой конфиденциальности</a>.</p>
+    {{ $t('registrApplicantPolicyA') }}
+    <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">{{ $t('registrApplicantLink') }}</a> {{ $t('registrApplicantPolicyB') }} <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">{{ $t('registrApplicantLink') }}</a>.</p>
 
   <div class="wrapper-for-global-btn">
-    <button @click="stepOne = false" :disabled="error" class="global-btn">Далее</button>
+    <button @click="stepOne = false" :disabled="error" class="global-btn">{{ $t('nextBtn') }}</button>
   </div>
 
-  <div class="center-line">или</div>
+  <div class="center-line">{{ $t('orTXT') }}</div>
   
   <div class="registr-aplicant__social d-flex align-items-center justify-content-center">
     <a class="registr-aplicant__social-item" target="_blank" href="https://www.facebook.com/an.works.ukraine/">
@@ -48,10 +48,10 @@
     </div>
 
   <div v-else-if="!stepOne && stepTwo" class="registr-aplicant">
-    <h1 class="title-reg-page main-title">Регистрация</h1>
+    <h1 class="title-reg-page main-title">{{ $t('registrationButton') }}</h1>
 
     <p class="registr-aplicant__text">
-      Введите код, высланный вам по sms
+      {{ $t('registrApplicantCode') }}
     </p>
 
     <code-holder 
@@ -60,25 +60,25 @@
     />
 
     <div class="wrapper-for-global-btn registr-aplicant__button">
-      <button @click="stepTwo = false" :disabled="!error" class="global-btn">Далее</button>
+      <button @click="stepTwo = false" :disabled="!error" class="global-btn">{{ $t('nextBtn') }}</button>
     </div>
 
     <div class="text-center">
-      <button class="global-btn">Отправить еще раз</button>
+      <button class="global-btn">{{ $t('linkSendMessage') }}</button>
     </div>
 
   </div>
 
   <div v-else class="registr-aplicant registr-aplicant__lastpage">
-    <h1 class="title-reg-page main-title">Спасибо за регистрацию</h1>
+    <h1 class="title-reg-page main-title">{{ $t('registrApplicanThxTitle') }}</h1>
     <p class="registr-aplicant__content-text">
-      Благодарим за регистрацию на нашем сервисе, как только все будет готово мы пришлем оповещение. В благодарность за уделенное время отправляем на почту “10 правил успешного резюме”. 
+      {{ $t('registrApplicanThxTxt') }} 
     </p>
     <p>
-      До скорой встречи!
+      {{ $t('registrApplicanThxSoon') }}
     </p>
     <div class="wrapper-for-global-btn">
-      <router-link :to="`/${$i18n.locale}`" class="global-btn">Вернуться на главную</router-link>
+      <router-link :to="`/${$i18n.locale}`" class="global-btn">{{ $t('registrApplicanThxBb') }}</router-link>
     </div>
   </div>
   
@@ -109,12 +109,12 @@ export default {
         code: []
       },
 
-      optionsSelect: [
-        'Друзья подсказали',
-        'Нашел через поиск в интернете',
-        'Увидел рекламный баннер',
-        'Я давно уже Ваш клиент'
-      ],
+      // optionsSelect: [
+      //   'Друзья подсказали',
+      //   'Нашел через поиск в интернете',
+      //   'Увидел рекламный баннер',
+      //   'Я давно уже Ваш клиент'
+      // ],
 
       bindProps: {
         defaultCountry: "UA",
@@ -165,6 +165,23 @@ export default {
       }
     },
   },
+  computed: {
+    optionSelect() {
+      return { 
+        playceholder: this.$t('registrApplicantSelectPlace'),
+        optionsSelect: [
+          this.$t('registrApplicantSelectA'),
+          this.$t('registrApplicantSelectB'),
+          this.$t('registrApplicantSelectC'),
+          this.$t('registrApplicantSelectD'),
+          this.$t('registrApplicantSelectE'),
+          this.$t('registrApplicantSelectF'),
+          this.$t('registrApplicantSelectG'),
+          this.$t('registrApplicantSelectH'),
+        ],
+      }
+    }
+  },
 };
 </script>
 
@@ -186,13 +203,16 @@ export default {
   .vti__input {
       border-bottom: 1px solid #41D7AA;
       border-radius: 0;
+      font-size: 18px;
+      font-weight: 300;
+      color: #222536;
   }
   &.error-phone {
     .vti__input {
       border-bottom: 1px solid #4587E0;
-      &:focus {
-        border-bottom: 1px solid #FF3B30;
-      }
+      // &:focus {
+      //   border-bottom: 1px solid #FF3B30;
+      // }
     }
   }
 

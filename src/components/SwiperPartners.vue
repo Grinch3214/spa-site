@@ -66,13 +66,13 @@ export default {
       isShown: false,
       showMore: false,
       swiperOptions: {
-        speed: 400,
+        speed: 2000,
         spaceBetween: 50,
         slidesPerView: 4,
         loop: true,
-        grabCursor: true,
+        grabCursor: false,
         autoplay: {
-          delay: 3000,
+          delay: 1,
         },
         breakpoints: {
           991: {
@@ -113,3 +113,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.swiper-container .swiper-wrapper {
+  transition-timing-function: linear;
+}
+</style>

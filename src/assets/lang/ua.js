@@ -5,6 +5,13 @@ module.exports = {
     employerBtn: 'Компаніям',
     showCompany: 'Показати все',
     hideCompany: 'Сховати все',
+    subscriptionBtn: 'Підписка',
+    applicantsTab: 'Здобувач',
+    employerTab: 'Компанії',
+    nextBtn: 'Далі',
+    backBtn: 'Назад',
+    orTXT: 'або',
+    linkSendMessage: 'Надіслати ще раз',
 
     //employer SPA
     employerMainTitle: 'Універсальний інструмент для оцінки та найму IT-фахівців',
@@ -73,4 +80,54 @@ module.exports = {
 
     // footer section
     applicationFooterTxt: 'Скористайтеся всіма перевагами для пошуку роботи',
+
+    // !Subscription
+    month: 'місяць',
+    tokens: 'токенів',
+
+    subscriptionMonth: 'Місячна',
+    subscriptionYear: 'Річна',
+    subscriptionBasic: 'Базовий',
+    subscriptionStandart: 'Стандарт',
+    subscriptionPremium: 'Преміум',
+    subscriptionEnterprise: 'Ентерпрайз',
+
+    subscriptionCardPriceTextA: 'Для компаній, де понад 800 співробітників',
+    subscriptionCardPriceTextB: 'ТТокени за цим тарифом встановлюються індивідуально',
+
+    subscriptionCardPriceTitleA: 'Обирайте комфортний тарифний план',
+    subscriptionCardPriceTitleB: 'Кожна підписка включає:',
+    subscriptionCardPriceTitleC: 'Що таке токени?',
+
+    subscriptionCardPriceMoreA: 'Щоб наш сервіс був доступний кожному, ми розробили низку тарифних планів з урахуванням потреб компаній будь-якого розміру: від стартапів чи студій до інтерпрайзу.',
+    subscriptionCardPriceMoreB_1: 'Відкриття контактів кандидата',
+    subscriptionCardPriceMoreB_2: 'Публікація вакансії від імені компанії',
+    subscriptionCardPriceMoreC: 'Це наша особлива валюта, яка дозволить використовувати всі унікальні особливості платформи і зробити процес найму максимально простим і швидким.',
+
+    //! Registration Page
+    registrApplicantPhone: 'Введіть ваш номер*',
+    registrApplicantSelect: 'Звідки ви дізналися про нас?',
+    registrApplicantSelectPlace: 'Свій варіант',
+    registrApplicantSelectA: 'Рекомендація колеги ',
+    registrApplicantSelectB: 'Рекомендація спільноти рекрутерів',
+    registrApplicantSelectC: 'За допомогою пошукових систем',
+    registrApplicantSelectD: 'З соціальних мереж',
+    registrApplicantSelectE: 'На заході або вебінарі',
+    registrApplicantSelectF: 'З реклами',
+    registrApplicantSelectG: 'Згадування у статті',
+    registrApplicantSelectH: 'Інше',
+
+    registrApplicantPolicyA: 'Після натискання кнопки "Далі", Ви автоматично погоджуєтесь з',
+    registrApplicantLink: 'Політикою конфіденційності',
+    registrApplicantPolicyB: 'та даєте згоду на обробку власних персональних данних відповідно з',
+
+    registrApplicantCode: 'Введіть код, надісланий вам по sms',
+    registrApplicanThxTitle: 'Дякуємо за реєстрацію ',
+    registrApplicanThxTxt: 'Дякуємо за реєстрацію на нашому сервісі, як тільки все буде готове ми надішлемо оповіщення.',
+    registrApplicanThxSoon: 'До скорої зустрічі!',
+    registrApplicanThxBb: 'Повернутися на головну',
+    // EMPLOYER
+    registrEmployerEmail: 'Введіть адресу корпоративної пошти',
+    //step 2
+    registrEmployerThxTxt: 'Зараз ми перебуваємо на фазі завершення системи тестування. Щойно весь функціонал стане доступним — ми відразу ж надішлемо оповіщення. Дякуємо за ваш вибір',
 }

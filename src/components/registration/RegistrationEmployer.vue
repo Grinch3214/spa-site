@@ -3,9 +3,9 @@
     <div class="registr-employer" v-if="stepOne">
 
       <h1 class="title-reg-page main-title">
-          Регистрация
+          {{ $t('registrationButton') }}
         </h1>
-      <p class="registr-employer__text">Введите адрес корпоративной почты</p>
+      <p class="registr-employer__text">{{ $t('registrEmployerEmail') }}</p>
 
       <base-input 
         type="email"
@@ -17,25 +17,25 @@
       />
 
       <p class="registr-employer__text">
-        При нажатии кнопки Далее, Вы автоматически соглашаетесь с 
-        <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">политикой конфиденциальности</a> и даёте согласие на обработку моих персональных данных в соответствии с <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">Политикой конфиденциальности</a>.</p>
+        {{ $t('registrApplicantPolicyA') }}
+        <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy">{{ $t('registrApplicantLink') }}</a> {{ $t('registrApplicantPolicyB') }} <a class="global-link" target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy"> {{ $t('registrApplicantLink') }}</a>.</p>
 
       <div class="wrapper-for-global-btn">
-        <button @click="stepOne = false" :disabled="error" class="global-btn">Далее</button>
+        <button @click="stepOne = false" :disabled="error" class="global-btn">{{ $t('nextBtn') }}</button>
       </div>
 
     </div>
 
     <div v-else class="registr-employer registr-employer__lastpage">
-    <h1 class="title-reg-page main-title">Спасибо за регистрацию</h1>
+    <h1 class="title-reg-page main-title">{{ $t('registrApplicanThxTitle') }}</h1>
     <p class="registr-employer__content-text">
-      Сейчас мы находимся на фазе завершения системы тестирования. Как только весь функционал станет доступен — мы сразу же пришлем оповещение. Благодарим за ваш выбор. 
+      {{ $t('registrEmployerThxTxt') }} 
     </p>
     <p>
-      До скорой встречи!
+      {{ $t('registrApplicanThxSoon') }}
     </p>
     <div class="wrapper-for-global-btn">
-      <router-link :to="`/${$i18n.locale}/employer`" class="global-btn">Вернуться на главную</router-link>
+      <router-link :to="`/${$i18n.locale}/employer`" class="global-btn">{{ $t('registrApplicanThxBb') }}</router-link>
     </div>
   </div>
     

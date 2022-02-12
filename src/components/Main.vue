@@ -6,19 +6,19 @@
 
 		<slot name="main"></slot>
 
-		<accordion />
+		<!-- <accordion /> -->
 	</main>
 </template>
 
 <script>
 import SwiperPartners from './SwiperPartners.vue'
-import Accordion from './Accordion.vue'
+// import Accordion from './Accordion.vue'
 
 export default {
     name: 'Main',
     components: {
         SwiperPartners,
-		Accordion
+		// Accordion
     },
 }
 </script>

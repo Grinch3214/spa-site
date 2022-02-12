@@ -4,7 +4,14 @@ module.exports = {
     applicantsBtn: 'Applicants',
     employerBtn: 'Companies',
     showCompany: 'Show all',
-     hideCompany: 'Hide all',
+    hideCompany: 'Hide all',
+    subscriptionBtn: 'Subscription',
+    applicantsTab: 'Applicant',
+    employerTab: 'Companies',
+    nextBtn: 'Next',
+    backBtn: 'Back',
+    orTXT: 'or',
+    linkSendMessage: 'Send again',
 
     //employer SPA
     employerMainTitle: 'Universal tool for evaluating and hiring IT specialists',
@@ -73,4 +80,54 @@ module.exports = {
 
     // footer section
     applicationFooterTxt: 'Take full advantage of your job search',
+
+    // !Subscription
+    month: 'month',
+    tokens: 'tokens',
+
+    subscriptionMonth: 'Monthly',
+    subscriptionYear: 'Yearly',
+    subscriptionBasic: 'Basic',
+    subscriptionStandart: 'Standard',
+    subscriptionPremium: 'Premium',
+    subscriptionEnterprise: 'Enterprise',
+
+    subscriptionCardPriceTextA: 'For companies with more than 800 employees',
+    subscriptionCardPriceTextB: 'Tokens at this rate installed individually',
+
+    subscriptionCardPriceTitleA: 'Choose a comfortable tariff plan',
+    subscriptionCardPriceTitleB: 'Each subscription includes:',
+    subscriptionCardPriceTitleC: 'What are tokens?',
+
+    subscriptionCardPriceMoreA: 'To make our service accessible to everyone, we have developed a range of tariff plans to meet the needs of companies of any size: from startups or studios to enterprises.',
+    subscriptionCardPriceMoreB_1: 'Opening candidate contacts',
+    subscriptionCardPriceMoreB_2: 'Job posting on behalf of the company',
+    subscriptionCardPriceMoreC: 'This is our special currency that will allow you to use all the unique features of the platform and make the recruitment process as simple and fast as possible.',
+
+    //! Registration Page
+    registrApplicantPhone: 'Enter your phone number*',
+    registrApplicantSelect: 'How did you hear about us?',
+    registrApplicantSelectPlace: 'Your choice',
+    registrApplicantSelectA: 'Recommendation of a colleague',
+    registrApplicantSelectB: 'Recruiting Community Recommendation',
+    registrApplicantSelectC: 'From search engines',
+    registrApplicantSelectD: 'From social networks',
+    registrApplicantSelectE: 'From an event or webinar',
+    registrApplicantSelectF: 'From an advertisement',
+    registrApplicantSelectG: 'From a mention in an article',
+    registrApplicantSelectH: 'Other',
+
+    registrApplicantPolicyA: 'When you click Next, you automatically agree to',
+    registrApplicantLink: 'the Privacy Policy',
+    registrApplicantPolicyB: 'and consent to the processing of your personal data in accordance with',
+
+    registrApplicantCode: 'Enter the code sent to you via sms',
+    registrApplicanThxTitle: 'Thank you for registering',
+    registrApplicanThxTxt: 'Thank you for registering on our service, as soon as everything is ready we will send a notification.',
+    registrApplicanThxSoon: 'See you soon!',
+    registrApplicanThxBb: 'Back to the main page',
+    // EMPLOYER
+    registrEmployerEmail: 'Enter your corporate email address',
+    //step 2
+    registrEmployerThxTxt: 'We are currently in the testing phase of completion. As soon as all functionality is available, we will send a notification right away. Thank you for your choice.',
 }

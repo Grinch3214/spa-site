@@ -11,12 +11,12 @@
         "
       >
         <div class="flex-grow-1 flex-md-grow-0 order-1 order-md-1">
-          <a href="#" class="registration-page__nav-logo">
+          <router-link :to="`/${$i18n.locale}`" class="registration-page__nav-logo">
             <img
               :src="require('../../assets/images/logo_footer.svg')"
               alt="logo"
             />
-          </a>
+          </router-link>
         </div>
 
         <div class="order-2 order-md-3">
@@ -29,14 +29,14 @@
             :class="{ active: tabContent }"
             @click="tabContent = true"
           >
-            Соискатель
+            {{ $t('applicantsTab') }}
           </button>
           <button
             class="main-tab"
             :class="{ active: !tabContent }"
             @click="tabContent = false"
           >
-            Компании
+            {{ $t('employerTab') }}
           </button>
         </div>
       </nav>

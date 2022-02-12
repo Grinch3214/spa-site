@@ -60,6 +60,7 @@ export default {
     right: 0;
     width: 25px;
     height: 25px;
+    cursor: pointer;
     &::before {
         content: "";
         position: absolute;
@@ -89,13 +90,20 @@ export default {
     display: none;
     position: absolute;
     top: 100%;
+    z-index: 1;
     left: 0;
     width: 100%;
     background: #fff;
+    padding-top: 7px;
     li {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        padding-left: 2px;
+      transition: .2s;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 2px;
+      cursor: pointer;
+      &:hover {
+        background: #A1CBF2;
+      }
     }
   }
 

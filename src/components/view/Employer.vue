@@ -102,6 +102,11 @@
             </div>
           </div>
         </section>
+        <accordion :accordeonImage="accordeonImage" :stepList="stepList">
+          <template v-slot:title>
+            {{$t('accordionTitle')}}
+          </template>
+        </accordion>
       </template>
     </Main>
     <Footer>
@@ -125,6 +130,7 @@
 <script>
 import Header from '../Header.vue'
 import Main from '../Main.vue'
+import Accordion from '../Accordion.vue'
 import Footer from '../Footer.vue'
 import Subscription from '../Subscription.vue'
 
@@ -133,10 +139,86 @@ export default {
   components: {
     Header,
     Main,
+    Accordion,
     Footer,
     Subscription,
   },
   methods: {
-  }
+  },
+  computed: {
+    accordeonImage() {
+      return [
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+      ]
+    },
+    stepList() {
+      return [
+        {
+          title: this.$t('accordionSubTitleA'),
+          body: this.$t('accordionSubTxtA'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('accordionSubTitleB'),
+          body: this.$t('accordionSubTxtB'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('accordionSubTitleC'),
+          body: this.$t('accordionSubTxtC'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('accordionSubTitleD'),
+          body: this.$t('accordionSubTxtD'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('accordionSubTitleE'),
+          body: this.$t('accordionSubTxtE'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        }
+      ]
+    },
+  },
 }
 </script>

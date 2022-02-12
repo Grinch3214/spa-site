@@ -5,7 +5,7 @@
         class="subscription__btn"
         :class="{ active: isActive }"
         @click.stop="isActive = !isActive"
-    >Подписка</button>
+    >{{$t('subscriptionBtn')}}</button>
     <div
         id="subscripContainer"
         class="subscription__list"
@@ -23,7 +23,7 @@
               @click="radioBtnClick"
               checked
             />
-            <label for="month-subscription">Месячная</label>
+            <label for="month-subscription">{{ $t('subscriptionMonth') }}</label>
           </div>
 
           <div class="subscription__form-radio flex-grow-1">
@@ -34,7 +34,7 @@
               value="year"
               @click="radioBtnClick"
             />
-            <label for="year-subscription">Годовая</label>
+            <label for="year-subscription">{{ $t('subscriptionYear') }}</label>
           </div>
 
           <div class="subscription__form-radio radio-info">
@@ -61,14 +61,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Базовый</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionBasic') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 50 <span>/ месяц</span>
+                  <span>$</span> 50 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">1000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -81,14 +81,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Стандарт</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionStandart') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 120 <span>/ месяц</span>
+                  <span>$</span> 120 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">2500</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -102,15 +102,15 @@
             >
               <div class="d-flex flex-column subscription__card-price">
                 <h3 class="subscription__card-price--title">
-                  Стандарт <span>+</span>
+                  {{ $t('subscriptionStandart') }} <span>+</span>
                 </h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 280 <span>/ месяц</span>
+                  <span>$</span> 280 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">6000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -123,14 +123,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Премиум</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionPremium') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 650 <span>/ месяц</span>
+                  <span>$</span> 650 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">15000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -143,12 +143,12 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Энтерпрайз</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionEnterprise') }}</h3>
                 <p class="subscription__card-price--unique">
-                  Для компаний где более 800 сотрудников
+                  {{ $t('subscriptionCardPriceTextA') }}
                 </p>
                 <p class="subscription__card-price--unique">
-                  Токены по этому тарифу устанавливаются индивидуально
+                  {{ $t('subscriptionCardPriceTextB') }}
                 </p>
               </div>
             </div>
@@ -164,14 +164,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Базовый</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionBasic') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 42.5 <span>/ месяц</span>
+                  <span>$</span> 42.5 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">1000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -184,14 +184,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Стандарт</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionStandart') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 102 <span>/ месяц</span>
+                  <span>$</span> 102 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">2500</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -205,15 +205,15 @@
             >
               <div class="d-flex flex-column subscription__card-price">
                 <h3 class="subscription__card-price--title">
-                  Стандарт <span>+</span>
+                  {{ $t('subscriptionStandart') }} <span>+</span>
                 </h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 238 <span>/ месяц</span>
+                  <span>$</span> 238 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">6000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -226,14 +226,14 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Премиум</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionPremium') }}</h3>
                 <p class="subscription__card-price--text">
-                  <span>$</span> 552.5 <span>/ месяц</span>
+                  <span>$</span> 552.5 <span>/ {{ $t('month') }}</span>
                 </p>
               </div>
               <div class="subscription__card-token">
                 <p class="subscription__card-token--price">15000</p>
-                <p class="subscription__card-token--token">токенов</p>
+                <p class="subscription__card-token--token">{{ $t('tokens') }}</p>
               </div>
             </div>
 
@@ -246,12 +246,12 @@
               "
             >
               <div class="d-flex flex-column subscription__card-price">
-                <h3 class="subscription__card-price--title">Энтерпрайз</h3>
+                <h3 class="subscription__card-price--title">{{ $t('subscriptionEnterprise') }}</h3>
                 <p class="subscription__card-price--unique">
-                  Для компаний где более 800 сотрудников
+                  {{ $t('subscriptionCardPriceTextA') }}
                 </p>
                 <p class="subscription__card-price--unique">
-                  Токены по этому тарифу устанавливаются индивидуально
+                  {{ $t('subscriptionCardPriceTextB') }}
                 </p>
               </div>
             </div>
@@ -268,31 +268,27 @@
             >
               <div class="d-flex flex-column subscription__card-price">
                 <h3 class="subscription__card-price--title">
-                  Выбирайте комфортный тарифный план
+                  {{ $t('subscriptionCardPriceTitleA') }}
                 </h3>
                 <p class="subscription__card-price--unique">
-                  Чтобы наш сервис был доступен каждому, мы разработали ряд
-                  тарифных планов с учетом потребностей компаний любого размера:
-                  от стартапов или студий до интерпрайз.
+                  {{ $t('subscriptionCardPriceMoreA') }}
                 </p>
 
                 <h3 class="subscription__card-price--title">
-                  Каждая подписка включает:
+                  {{ $t('subscriptionCardPriceTitleB') }}
                 </h3>
                 <p class="subscription__card-price--unique unique-list">
-                  Открытие контактов кандидата
+                  {{ $t('subscriptionCardPriceMoreB_1') }}
                 </p>
                 <p class="subscription__card-price--unique unique-list">
-                  Публикация вакансии от имени компании
+                  {{ $t('subscriptionCardPriceMoreB_2') }}
                 </p>
 
                 <h3 class="subscription__card-price--title">
-                  Что такое токены?
+                  {{ $t('subscriptionCardPriceTitleC') }}
                 </h3>
                 <p class="subscription__card-price--unique">
-                  Это наша особая валюта которая позволит использовать все
-                  уникальные особенности платформы и сделать процесс найма
-                  максимально простым и быстрым.
+                  {{ $t('subscriptionCardPriceMoreC') }}
                 </p>
               </div>
             </div>

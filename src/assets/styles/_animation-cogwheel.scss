@@ -1,0 +1,69 @@
+.count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 118px;
+    height: 111px;
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: url('~@/assets/images/animation/ovl_1.png') no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+#n1 {
+    top: 0px;
+    left: -25px;
+    animation-name: A1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#n2 {
+    width: 42px;
+    height: 42px;
+    top: 15px;
+    left: 54px;
+    animation-name: A2;
+    background: url('~@/assets/images/animation/ovl_3.png') no-repeat;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#n3 {
+    width: 53px;
+    height: 53px;
+    top: 60px;
+    left: 32px;
+    background: url('~@/assets/images/animation/ovl_2.png') no-repeat;
+    animation-name: A2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes A1 {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+}
+
+@keyframes A2 {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(-360deg);
+    }
+}

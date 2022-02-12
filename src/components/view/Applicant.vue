@@ -20,10 +20,15 @@
 				</div>
 				<div class="header__animation">
 					<div class="header__soonimage d-none d-md-block">
+						<div class = "count">
+							<div class = "circles" id = "n1"></div>
+							<div class = "circles" id = "n2"></div>
+							<div class = "circles" id = "n3"></div>
+						</div>
 						<picture>
-							<source :srcset="require('../../assets/images/main_image.webp')" type="image/webp">
-							<source :srcset="require('../../assets/images/main_image.png')" type="image/jpeg">
-							<img width="920" height="534" :src="require('../../assets/images/main_image.png')" alt="soon image">
+							<source :srcset="require('../../assets/images/main_image_applicant.webp')" type="image/webp">
+							<source :srcset="require('../../assets/images/main_image_applicant.png')" type="image/jpeg">
+							<img width="920" height="534" :src="require('../../assets/images/main_image_applicant.png')" alt="soon image">
 						</picture>
 					</div>
 				</div>
@@ -99,6 +104,11 @@
 					</div>
 				</div>
 			</section>
+			<accordion :accordeonImage="accordeonImage" :stepList="stepList">
+				<template v-slot:title>
+					{{$t('applicationAccordionTitle')}}
+                </template>
+			</accordion>
 		</template>
 	</Main>
     
@@ -121,8 +131,9 @@
 </template>
 
 <script>
-import Header from "../Header.vue";
+import Header from "../Header.vue"
 import Main from '../Main.vue'
+import Accordion from '../Accordion.vue'
 import Footer from '../Footer.vue'
 
 export default {
@@ -130,7 +141,84 @@ export default {
   components: {
     Header,
     Main,
+	Accordion,
     Footer,
+  },
+  data:() => ({}),
+  computed: {
+	accordeonImage() {
+      return [
+		{
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+            pngSourse: require("@/assets/images/content/image_4.png"),
+            image: require("@/assets/images/content/image_4.png"),
+        },
+      ]
+	},
+    stepList() {
+      return [
+        {
+          title: this.$t('applicationAccordionSubTitleA'),
+          body: this.$t('applicationAccordionSubTxtA'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('applicationAccordionSubTitleB'),
+          body: this.$t('applicationAccordionSubTxtB'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('applicationAccordionSubTitleC'),
+          body: this.$t('applicationAccordionSubTxtC'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('applicationAccordionSubTitleD'),
+          body: this.$t('applicationAccordionSubTxtD'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        },
+        {
+          title: this.$t('applicationAccordionSubTitleE'),
+          body: this.$t('applicationAccordionSubTxtE'),
+          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
+          pngSourse: require("@/assets/images/content/image_4.png"),
+          image: require("@/assets/images/content/image_4.png"),
+        }
+      ]
+    },
   },
 };
 </script>

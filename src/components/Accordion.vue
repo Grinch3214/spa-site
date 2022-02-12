@@ -20,7 +20,10 @@
 					</div>
 					<div class="col-12 col-lg-6">
 						<div class="accardion__inner">
-							<h3 class="accardion__title main-title">{{$t('accordionTitle')}}</h3>
+							<h3 class="accardion__title main-title">
+                                <!-- {{$t('accordionTitle')}} -->
+                                <slot name="title"></slot>
+                            </h3>
 							<div class="accardion__wrapper">
 
 								<div 
@@ -58,119 +61,23 @@
 
 export default {
     name: 'Accordeon',
+    props: {
+      accordeonImage: {
+        type: Array,
+        default() {
+          return []
+        }
+      },
+      stepList: {
+        type: Array,
+        default() {
+          return []
+        }
+      }
+    },
     data:() => ({
-        // accordeonElem: [
-        //     {
-        //         title: this.$t('employerPromoTitleA'),
-        //         body: 'Пройдите процедуру регистрации и получите доступ ко всем возможностям платформы',
-        //         webpSourse: require("../assets/images/content/webp/image_4.webp"),
-        //         pngSourse: require("../assets/images/content/image_4.png"),
-        //         image: require("../assets/images/content/image_4.png"),
-        //     },
-        //     {
-        //         title: 'Поиск кандидата в рейтинге',
-        //         body: 'Благодаря динамической рейтинговой системе, подходящего сотрудника можно найти гораздо быстрее',
-        //         webpSourse: require("../assets/images/content/webp/image_4.webp"),
-        //         pngSourse: require("../assets/images/content/image_4.png"),
-        //         image: require("../assets/images/content/image_4.png"),
-        //     },
-        //     {
-        //         title: 'Переход в чат с подходящим кандидатом',
-        //         body: 'Связывайтесь с кандидатом прямо на платформе, для вашего удобства мы добавили встроенный календарь и еще несколько полезных инструментов ',
-        //         webpSourse: require("../assets/images/content/webp/image_4.webp"),
-        //         pngSourse: require("../assets/images/content/image_4.png"),
-        //         image: require("../assets/images/content/image_4.png"),
-        //     },
-        //     {
-        //         title: 'Собеседование',
-        //         body: 'Мы сократили путь оценки твоих качеств, что позволит быстрее получить долгожданный оффер и принять выгодное предложение',
-        //         webpSourse: require("../assets/images/content/webp/image_4.webp"),
-        //         pngSourse: require("../assets/images/content/image_4.png"),
-        //         image: require("../assets/images/content/image_4.png"),
-        //     },
-        //     {
-        //         title: 'Успешный найм идеального кандидата для текущей вакансии',
-        //         body: 'Поздравляем! Вы сократили время найма и подобрали самого лучшего специалиста для вашего проекта.',
-        //         webpSourse: require("../assets/images/content/webp/image_4.webp"),
-        //         pngSourse: require("../assets/images/content/image_4.png"),
-        //         image: require("../assets/images/content/image_4.png"),
-        //     }
-        // ],
-        accordeonImage: [
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            },
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            },
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            },
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            },
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            },
-            {
-                webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                pngSourse: require("../assets/images/content/image_4.png"),
-                image: require("../assets/images/content/image_4.png"),
-            }
-        ],
         activeItem: 0,
     }),
-    computed: {
-        stepList() {
-            return [
-                {
-                    title: this.$t('accordionSubTitleA'),
-                    body: this.$t('accordionSubTxtA'),
-                    webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                    pngSourse: require("../assets/images/content/image_4.png"),
-                    image: require("../assets/images/content/image_4.png"),
-                },
-                {
-                    title: this.$t('accordionSubTitleB'),
-                    body: this.$t('accordionSubTxtB'),
-                    webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                    pngSourse: require("../assets/images/content/image_4.png"),
-                    image: require("../assets/images/content/image_4.png"),
-                },
-                {
-                    title: this.$t('accordionSubTitleC'),
-                    body: this.$t('accordionSubTxtC'),
-                    webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                    pngSourse: require("../assets/images/content/image_4.png"),
-                    image: require("../assets/images/content/image_4.png"),
-                },
-                {
-                    title: this.$t('accordionSubTitleD'),
-                    body: this.$t('accordionSubTxtD'),
-                    webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                    pngSourse: require("../assets/images/content/image_4.png"),
-                    image: require("../assets/images/content/image_4.png"),
-                },
-                {
-                    title: this.$t('accordionSubTitleE'),
-                    body: this.$t('accordionSubTxtE'),
-                    webpSourse: require("../assets/images/content/webp/image_4.webp"),
-                    pngSourse: require("../assets/images/content/image_4.png"),
-                    image: require("../assets/images/content/image_4.png"),
-                }
-            ]
-        },
-    },
     methods: {
         open(index) {
             this.activeItem = index
