@@ -24,10 +24,15 @@
             </div>
             <div class="header__animation">
               <div class="header__soonimage d-none d-md-block">
+                <div class = "count">
+                  <div class = "circles" id = "n1"></div>
+                  <div class = "circles" id = "n2"></div>
+                  <div class = "circles" id = "n3"></div>
+                </div>
                 <picture>
-                  <source :srcset="require('../../assets/images/main_image.webp')" type="image/webp">
-                  <source :srcset="require('../../assets/images/main_image.png')" type="image/jpeg">
-                  <img width="920" height="534" :src="require('../../assets/images/main_image.png')" alt="soon image">
+                  <source :srcset="require('../../assets/images/main_image_employer.webp')" type="image/webp">
+                  <source :srcset="require('../../assets/images/main_image_employer.png')" type="image/jpeg">
+                  <img width="920" height="534" :src="require('../../assets/images/main_image_employer.png')" alt="soon image">
                 </picture>
               </div>
             </div>
@@ -149,34 +154,29 @@ export default {
     accordeonImage() {
       return [
         {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
+            webpSourse: require("@/assets/images/content/webp/employer_slider_1.webp"),
+            pngSourse: require("@/assets/images/content/employer_slider_1.png"),
+            image: require("@/assets/images/content/employer_slider_1.png"),
         },
         {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
+            webpSourse: require("@/assets/images/content/webp/employer_slider_2.webp"),
+            pngSourse: require("@/assets/images/content/employer_slider_2.png"),
+            image: require("@/assets/images/content/employer_slider_2.png"),
         },
         {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
+            webpSourse: require("@/assets/images/content/webp/employer_slider_3.webp"),
+            pngSourse: require("@/assets/images/content/employer_slider_3.png"),
+            image: require("@/assets/images/content/employer_slider_3.png"),
         },
         {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
+            webpSourse: require("@/assets/images/content/webp/employer_slider_4.webp"),
+            pngSourse: require("@/assets/images/content/employer_slider_4.png"),
+            image: require("@/assets/images/content/employer_slider_4.png"),
         },
         {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
-        },
-        {
-            webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-            pngSourse: require("@/assets/images/content/image_4.png"),
-            image: require("@/assets/images/content/image_4.png"),
+            webpSourse: require("@/assets/images/content/webp/employer_slider_5.webp"),
+            pngSourse: require("@/assets/images/content/employer_slider_5.png"),
+            image: require("@/assets/images/content/employer_slider_5.png"),
         },
       ]
     },
@@ -185,37 +185,38 @@ export default {
         {
           title: this.$t('accordionSubTitleA'),
           body: this.$t('accordionSubTxtA'),
-          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-          pngSourse: require("@/assets/images/content/image_4.png"),
-          image: require("@/assets/images/content/image_4.png"),
+          webpSourse: require("@/assets/images/content/webp/employer_slider_1.webp"),
+          pngSourse: require("@/assets/images/content/employer_slider_1.png"),
+          image: require("@/assets/images/content/employer_slider_1.png"),
         },
         {
           title: this.$t('accordionSubTitleB'),
           body: this.$t('accordionSubTxtB'),
-          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-          pngSourse: require("@/assets/images/content/image_4.png"),
-          image: require("@/assets/images/content/image_4.png"),
+          webpSourse: require("@/assets/images/content/webp/employer_slider_2.webp"),
+          pngSourse: require("@/assets/images/content/employer_slider_2.png"),
+          image: require("@/assets/images/content/employer_slider_2.png"),
         },
         {
           title: this.$t('accordionSubTitleC'),
           body: this.$t('accordionSubTxtC'),
-          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-          pngSourse: require("@/assets/images/content/image_4.png"),
-          image: require("@/assets/images/content/image_4.png"),
+          webpSourse: require("@/assets/images/content/webp/employer_slider_3.webp"),
+          pngSourse: require("@/assets/images/content/employer_slider_3.png"),
+          image: require("@/assets/images/content/employer_slider_3.png"),
         },
         {
           title: this.$t('accordionSubTitleD'),
           body: this.$t('accordionSubTxtD'),
-          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-          pngSourse: require("@/assets/images/content/image_4.png"),
-          image: require("@/assets/images/content/image_4.png"),
+          webpSourse: require("@/assets/images/content/webp/employer_slider_4.webp"),
+          pngSourse: require("@/assets/images/content/employer_slider_4.png"),
+          image: require("@/assets/images/content/employer_slider_4.png"),
         },
         {
           title: this.$t('accordionSubTitleE'),
           body: this.$t('accordionSubTxtE'),
-          webpSourse: require("@/assets/images/content/webp/image_4.webp"),
-          pngSourse: require("@/assets/images/content/image_4.png"),
-          image: require("@/assets/images/content/image_4.png"),
+          webpSourse: require("@/assets/images/content/webp/employer_slider_5.webp"),
+          pngSourse: require("@/assets/images/content/employer_slider_5.png"),
+          image: require("@/assets/images/content/employer_slider_5.png"),
+          class: 'hidden'
         }
       ]
     },
