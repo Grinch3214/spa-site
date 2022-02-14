@@ -242,6 +242,7 @@ export default {
   }
 
   &__social {
+    margin-bottom: 40px;
   }
 
   &__button {

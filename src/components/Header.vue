@@ -13,7 +13,8 @@
 
 				<div class="header__buttons">
 					<!-- <button class="header__buttons-join global-btn">{{ $t('loginButton') }}</button> -->
-					<router-link :to="`/${$i18n.locale}/registration`" class="header__buttons-registration global-btn global-link d-none d-md-inline-block">{{ $t('registrationButton') }}</router-link>
+					<router-link v-if="show" :to="`/${$i18n.locale}/registration/applicant`" class="header__buttons-registration global-btn global-link d-none d-md-inline-block">{{ $t('registrationButton') }}</router-link>
+					<router-link v-else :to="`/${$i18n.locale}/registration/employer`" class="header__buttons-registration global-btn global-link d-none d-md-inline-block">{{ $t('registrationButton') }}</router-link>
 				</div>
 			</nav>
 			
@@ -33,12 +34,18 @@ export default {
 		ChangeLanguage,
 	},
 	data: () => ({
-		i18n
+		i18n,
+		show: true,
 	}),
 	methods: {
         setLocale(locale) {
             this.i18n.locale = locale
         }
-    }
+    },
+	mounted() {
+      if(this.$route.name === 'Employer') {
+        return this.show = false
+      }
+	}
 }
 </script>

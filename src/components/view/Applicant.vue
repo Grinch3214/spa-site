@@ -13,7 +13,7 @@
 				</h2>
 				<p class="header__text">{{ $t('applicationSubTitle') }}</p>
 				<div class="header__links">
-					<router-link :to="`/${$i18n.locale}/registration`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
+					<router-link :to="`/${$i18n.locale}/registration/applicant`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
 					<router-link :to="`/${$i18n.locale}/employer`" class="header__links-link global-btn">
 						{{ $t('employerBtn') }}
 					</router-link>
@@ -21,9 +21,9 @@
 				<div class="header__animation">
 					<div class="header__soonimage d-none d-md-block">
 						<div class = "count">
-							<div class = "circles" id = "n1"></div>
-							<div class = "circles" id = "n2"></div>
-							<div class = "circles" id = "n3"></div>
+							<div class="circles n1"></div>
+							<div class="circles n2"></div>
+							<div class="circles n3"></div>
 						</div>
 						<picture>
 							<source :srcset="require('../../assets/images/main_image_applicant.webp')" type="image/webp">

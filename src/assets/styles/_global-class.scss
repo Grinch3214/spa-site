@@ -61,7 +61,7 @@ button {
     border-bottom: 1px solid transparent;
     background: transparent;
     font-weight: 300;
-    &.active {
+    &.router-link-active {
         color: #528BE6;
         border-bottom: 1px solid #528BE6;
         font-weight: 700;

@@ -16,7 +16,7 @@
             </h2>
             <p class="header__text">{{ $t('employerSubTitle') }}</p>
             <div class="header__links">
-              <router-link :to="`/${$i18n.locale}/registration`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
+              <router-link :to="`/${$i18n.locale}/registration/employer`" class="header__links-registration global-btn"> {{ $t('registrationButton') }} </router-link>
               <!-- <button class="header__links-registration global-btn">{{ $t('registrationButton') }}</button> -->
               <router-link :to="`/${$i18n.locale}`" class="header__links-link global-btn">
                 {{ $t('applicantsBtn') }}
@@ -25,9 +25,9 @@
             <div class="header__animation">
               <div class="header__soonimage d-none d-md-block">
                 <div class = "count">
-                  <div class = "circles" id = "n1"></div>
-                  <div class = "circles" id = "n2"></div>
-                  <div class = "circles" id = "n3"></div>
+                  <div class = "circles n1"></div>
+                  <div class = "circles n2"></div>
+                  <div class = "circles n3"></div>
                 </div>
                 <picture>
                   <source :srcset="require('../../assets/images/main_image_employer.webp')" type="image/webp">

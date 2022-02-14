@@ -11,7 +11,13 @@
         "
       >
         <div class="flex-grow-1 flex-md-grow-0 order-1 order-md-1">
-          <router-link :to="`/${$i18n.locale}`" class="registration-page__nav-logo">
+          <router-link v-if="tabContent" :to="`/${$i18n.locale}`" class="registration-page__nav-logo">
+            <img
+              :src="require('../../assets/images/logo_footer.svg')"
+              alt="logo"
+            />
+          </router-link>
+          <router-link v-else :to="`/${$i18n.locale}/employer`" class="registration-page__nav-logo">
             <img
               :src="require('../../assets/images/logo_footer.svg')"
               alt="logo"
@@ -24,26 +30,27 @@
         </div>
 
         <div class="registration-page__nav-tabs d-flex justify-content-between order-3 order-md-2">
-          <button
+          <!-- <button
             class="main-tab"
             :class="{ active: tabContent }"
             @click="tabContent = true"
           >
-            {{ $t('applicantsTab') }}
-          </button>
-          <button
+          </button> -->
+          <router-link class="main-tab" :to="`/${$i18n.locale}/registration/applicant`"><span @click="tabContent = true">{{ $t('applicantsTab') }}</span></router-link>
+
+          <!-- <button
             class="main-tab"
             :class="{ active: !tabContent }"
             @click="tabContent = false"
           >
-            {{ $t('employerTab') }}
-          </button>
+          </button> -->
+          <router-link @click="tabContent = false" class="main-tab" :to="`/${$i18n.locale}/registration/employer`"><span @click="tabContent = false">{{ $t('employerTab') }}</span></router-link>
         </div>
       </nav>
-
-      <keep-alive>
+      <router-view></router-view>
+      <!-- <keep-alive>
         <component :is="componentRegistration" />
-      </keep-alive>
+      </keep-alive> -->
     </div>
     <div class="footer d-lg-none">
       <div class="background-figure"></div>
@@ -55,14 +62,14 @@
 
 <script>
 import ChangeLanguage from "../ChangeLanguage.vue";
-import RegistrationApplication from "../registration/RegistrationApplication.vue";
-import RegistrationEmployer from "../registration/RegistrationEmployer.vue";
+// import RegistrationApplication from "../registration/RegistrationApplication.vue";
+// import RegistrationEmployer from "../registration/RegistrationEmployer.vue";
 
 export default {
   name: "Registration",
   components: {
-    RegistrationApplication,
-    RegistrationEmployer,
+    // RegistrationApplication,
+    // RegistrationEmployer,
     ChangeLanguage,
   },
   data() {
@@ -70,13 +77,18 @@ export default {
       tabContent: true,
     };
   },
+  mounted() {
+    if(this.$route.name === 'RegistrationEmployer') {
+      return this.tabContent = false
+    }
+  },
   computed: {
-    componentRegistration() {
-      if (this.tabContent) {
-        return "RegistrationApplication";
-      }
-      return "RegistrationEmployer";
-    },
+    // componentRegistration() {
+    //   if (this.tabContent) {
+    //     return "RegistrationApplication";
+    //   }
+    //   return "RegistrationEmployer";
+    // },
   },
 };
 </script>
@@ -170,14 +182,18 @@ export default {
     width: 100%;
     padding-top: 32px;
     padding-bottom: 36px;
+    font-size: 14px;
     @media screen and (min-width: 768px) {
       width: auto;
       padding: 0;
       margin-right: auto;
       margin-left: 39px;
     }
-    button {
+    a {
       padding-bottom: 8px;
+      display: inline-block;
+      color: #222536;
+      text-decoration: none;
       width: 50%;
       margin-right: 34px;
       padding-left: 0;

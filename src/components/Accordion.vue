@@ -11,9 +11,9 @@
               :key="index"
             >
             <div class="count">
-							<div class="circles" id="n1"></div>
-							<div class="circles" id="n2"></div>
-							<div class="circles" id="n3"></div>
+							<div class="circles n1"></div>
+							<div class="circles n2"></div>
+							<div class="circles n3"></div>
 						</div>
 							<picture>
 								<source :srcset="item.webpSourse" type="image/webp">
@@ -45,9 +45,9 @@
 									</p>
 									<div class="d-none d-md-block d-lg-none accardion__elem-text-img">
                     <div class="count" :class="item.class">
-                      <div class="circles" id="n1"></div>
-                      <div class="circles" id="n2"></div>
-                      <div class="circles" id="n3"></div>
+                      <div class="circles n1"></div>
+                      <div class="circles n2"></div>
+                      <div class="circles n3"></div>
                     </div>
 										<picture>
 											<source :srcset="item.webpSourse" type="image/webp">

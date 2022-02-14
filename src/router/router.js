@@ -32,8 +32,21 @@ const router = new VueRouter({
                 {
                     path: 'registration',
                     name: 'Registration',
-                    component: () => import('../components/view/Registration.vue')
-                }
+                    component: () => import('../components/view/Registration.vue'),
+                    redirect: { name: 'RegistrationApplicant' },
+                    children: [
+                        {
+                            path: 'employer',
+                            name: 'RegistrationEmployer',
+                            component: () => import('../components/registration/RegistrationEmployer.vue')
+                        },
+                        {
+                            path: 'applicant',
+                            name: 'RegistrationApplicant',
+                            component: () => import('../components/registration/RegistrationApplication.vue')
+                        },
+                    ],
+                },
             ]
         },
         {
